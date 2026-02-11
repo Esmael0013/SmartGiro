@@ -204,3 +204,48 @@ footer { background: #010005; padding: 50px 24px; text-align: center; border-top
     .p-number { font-size: 1rem; }
     .p-stat i { font-size: 1.2rem; padding: 6px; }
 }
+/* --- NOVA MARCA: ESMAELTECH SHOP -> ET SHOP --- */
+.brand-animated {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* O ponto e o "!" com o seu azul padrão */
+.brand-dot {
+    color: var(--neon-cyan);
+}
+
+/* A assinatura: Forte, com o mesmo peso do logo */
+.collapse-text {
+    display: inline-block;
+    overflow: hidden;
+    color: #ffffff;
+    font-weight: 900; /* Força total igual ao SMARTGIRO */
+    
+    /* Ajuste de tempo: 1.5s para sumir, começando após 2.5s de exibição */
+    animation: squeezeText 1.9s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
+}
+
+@keyframes squeezeText {
+    0% {
+        max-width: 300px; /* Valor alto para garantir que não quebre linha */
+        opacity: 1;
+        transform: translateX(0);
+    }
+    /* Pausa dramática: mantém o texto 100% visível por uma fração da animação */
+    20% {
+        max-width: 300px;
+        opacity: 1;
+    }
+    100% {
+        max-width: 0;
+        opacity: 0;
+        transform: translateX(-15px); /* Deslize suave para a esquerda */
+    }
+}
