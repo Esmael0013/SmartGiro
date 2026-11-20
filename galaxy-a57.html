@@ -1,0 +1,402 @@
+Substitua todo o conteúdo de `galaxy-a57.html` pelo código abaixo. O estilo específico do A57 já está dentro do arquivo, e o `style.css` continua trazendo o visual da página principal. Mantive o preço de **R$ 1.412,00**, o logo **SMARTGIRO.** e o caminho da foto `img/A57png.png`.
+
+O link do seu perfil já está no botão do TikTok. Deixei marcado no código o lugar para inserir o vídeo específico do unboxing quando você tiver o link.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Samsung Galaxy A57 5G cinza, com 128 GB e 8 GB de RAM, à venda na SmartGiro. Confira a unidade, a entrega presencial e a ficha técnica.">
+
+    <title>Samsung Galaxy A57 5G | SmartGiro</title>
+
+    <link rel="icon" type="image/png" href="unnamed-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .a57-page {
+            --a57-accent: #a8c8ff;
+            --a57-text: #cdd5e2;
+        }
+
+        .a57-page header a,
+        .a57-text-link,
+        .a57-sources a {
+            color: var(--a57-accent);
+            text-underline-offset: 4px;
+        }
+
+        .a57-page header a {
+            font-size: 0.9rem;
+        }
+
+        .a57-page .hero {
+            padding-bottom: 40px;
+        }
+
+        .a57-page .pill-badge {
+            color: var(--a57-accent);
+        }
+
+        .a57-page .hero-title {
+            line-height: 1.05;
+        }
+
+        .a57-page .a57-photo {
+            max-width: 320px;
+            margin: 24px auto 18px;
+        }
+
+        .a57-photo .product-image-real {
+            max-height: 370px;
+            object-fit: contain;
+        }
+
+        .a57-page .a57-price {
+            margin: 0 auto 20px;
+            color: var(--a57-accent);
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .a57-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 auto 24px;
+            list-style: none;
+        }
+
+        .a57-highlights li {
+            padding: 7px 12px;
+            border: var(--glass-border);
+            border-radius: 8px;
+            background: var(--glass-bg);
+            font-size: 0.875rem;
+        }
+
+        .a57-page .a57-action {
+            max-width: 320px;
+            margin: 0 auto;
+            border-color: var(--a57-accent);
+            color: var(--a57-accent);
+            text-align: center;
+        }
+
+        .a57-page .a57-action:hover,
+        .a57-page .a57-action:focus-visible {
+            background: var(--a57-accent);
+            color: #050505;
+        }
+
+        .a57-page .a57-content {
+            max-width: 820px;
+            margin: 0 auto;
+            padding-bottom: 56px;
+        }
+
+        .a57-page #unidade,
+        .a57-page #unboxing,
+        .a57-page #ficha {
+            scroll-margin-top: 90px;
+        }
+
+        .a57-page .a57-panel {
+            margin: 0 0 24px;
+            padding: clamp(20px, 5vw, 32px);
+        }
+
+        .a57-page .a57-panel:hover {
+            transform: none;
+        }
+
+        .a57-panel h2 {
+            margin-bottom: 12px;
+            font-size: clamp(1.4rem, 4vw, 1.85rem);
+            text-transform: none;
+        }
+
+        .a57-panel h3 {
+            margin: 20px 0 6px;
+            font-size: 1.1rem;
+            text-transform: none;
+        }
+
+        .a57-panel p,
+        .a57-table td,
+        .a57-sources {
+            color: var(--a57-text);
+        }
+
+        .a57-seller {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .a57-seller img {
+            flex-shrink: 0;
+            border: 2px solid var(--a57-accent);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .a57-seller p {
+            font-size: 0.85rem;
+        }
+
+        .a57-text-link {
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        .a57-video-panel {
+            margin-top: 18px;
+            padding: 20px;
+            border: var(--glass-border);
+            border-radius: 12px;
+            background: rgba(41, 121, 255, 0.08);
+        }
+
+        .a57-video-panel .btn-social {
+            width: fit-content;
+            max-width: 100%;
+            margin-top: 14px;
+        }
+
+        .a57-table-wrap {
+            border: var(--glass-border);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--glass-bg);
+        }
+
+        .a57-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .a57-table th,
+        .a57-table td {
+            padding: 12px clamp(10px, 3vw, 20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            vertical-align: top;
+            overflow-wrap: anywhere;
+        }
+
+        .a57-table th[scope="rowgroup"] {
+            color: var(--a57-accent);
+            background: rgba(41, 121, 255, 0.12);
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .a57-table th[scope="row"] {
+            width: 36%;
+            font-weight: 600;
+        }
+
+        .a57-sources {
+            margin: 16px 0 26px;
+            font-size: 0.9rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .a57-page::before,
+            .a57-page::after,
+            .a57-page .product-glow {
+                animation: none;
+            }
+
+            .a57-page .product-image-real,
+            .a57-page .hero:hover .product-image-real {
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="a57-page">
+    <header>
+        <div class="brand">SMARTGIRO<span>.</span></div>
+        <a href="index.html#vitrine">Voltar à vitrine</a>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="titulo-a57">
+            <p class="pill-badge">Revenda pessoal · SmartGiro</p>
+            <h1 id="titulo-a57" class="hero-title">Samsung Galaxy A57 5G</h1>
+
+            <div class="product-showcase a57-photo">
+                <div class="product-glow" aria-hidden="true"></div>
+                <img
+                    src="img/A57png.png"
+                    class="product-image-real"
+                    alt="Samsung Galaxy A57 5G na cor cinza"
+                >
+            </div>
+
+            <p class="product-price a57-price">R$ 1.412,00</p>
+
+            <ul class="a57-highlights" aria-label="Dados da unidade à venda">
+                <li>128 GB</li>
+                <li>8 GB de RAM</li>
+                <li>Cinza</li>
+                <li>Estado impecável</li>
+            </ul>
+
+            <a href="#unidade" class="btn btn-neon a57-action">
+                Conheça o aparelho
+            </a>
+        </section>
+
+        <div class="container a57-content">
+            <section id="unidade" class="tech-card a57-panel" aria-labelledby="titulo-unidade">
+                <div class="a57-seller">
+                    <img
+                        src="EsmaelTechfotode Perfil.png"
+                        alt=""
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                    >
+                    <div>
+                        <strong>EsmaelTech!</strong>
+                        <p>Criador da SmartGiro</p>
+                    </div>
+                </div>
+
+                <h2 id="titulo-unidade">Sobre o A57 que estou vendendo</h2>
+                <p>
+                    Fala! Aqui é o Esmael. Estou vendendo meu Galaxy A57 5G cinza,
+                    com 128 GB de armazenamento e 8 GB de RAM. Ele está em estado impecável.
+                </p>
+
+                <h3>Como é a entrega</h3>
+                <p>
+                    A entrega é presencial, de mão em mão. Na hora, a gente liga o celular
+                    junto. Você pode conferir o acabamento, testar a tela e abrir a câmera
+                    com calma. Se tiver alguma dúvida, pode perguntar direto pra mim.
+                </p>
+
+                <a class="a57-text-link" href="#unboxing">Veja onde acompanho o unboxing</a>
+            </section>
+
+            <section id="unboxing" class="tech-card a57-panel" aria-labelledby="titulo-unboxing">
+                <h2 id="titulo-unboxing">Unboxing do Galaxy A57 5G</h2>
+                <p>
+                    É no TikTok que eu mostro os aparelhos de perto. Vou deixar aqui
+                    o vídeo do A57 pra você acompanhar o unboxing.
+                </p>
+
+                <div class="a57-video-panel">
+                    <p>Link do unboxing em breve.</p>
+
+                    <!-- Quando tiver o vídeo, remova a linha acima e habilite o botão abaixo,
+                         substituindo COLE_AQUI_O_LINK_DO_VIDEO pelo link do TikTok.
+
+                    <a class="btn-social" href="COLE_AQUI_O_LINK_DO_VIDEO"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-play" aria-hidden="true"></i>
+                        Assistir ao unboxing
+                    </a>
+
+                    -->
+
+                    <a
+                        class="btn-social"
+                        href="https://www.tiktok.com/@esmaeltech23"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        Meu TikTok · @esmaeltech23
+                    </a>
+                </div>
+
+                <a class="a57-text-link" href="#ficha">Ir para a ficha técnica</a>
+            </section>
+
+            <section id="ficha" aria-labelledby="titulo-ficha">
+                <h2 id="titulo-ficha">Especificações detalhadas</h2>
+
+                <div class="a57-table-wrap">
+                    <table class="a57-table" aria-labelledby="titulo-ficha">
+                        <tbody>
+                            <tr><th colspan="2" scope="rowgroup">Desempenho e software</th></tr>
+                            <tr><th scope="row">Processador</th><td>Samsung Exynos 1680, 8 núcleos, até 2,9 GHz</td></tr>
+                            <tr><th scope="row">GPU</th><td>Samsung Xclipse 550</td></tr>
+                            <tr><th scope="row">Memória RAM</th><td>8 GB</td></tr>
+                            <tr><th scope="row">Armazenamento</th><td>128 GB nesta unidade</td></tr>
+                            <tr><th scope="row">Interface de lançamento</th><td>One UI 8.5</td></tr>
+                            <tr><th scope="row">Atualizações</th><td>Até 6 gerações do Android e até 6 anos de atualizações de segurança</td></tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr><th colspan="2" scope="rowgroup">Tela</th></tr>
+                            <tr><th scope="row">Painel</th><td>Super AMOLED Plus com Vision Booster</td></tr>
+                            <tr><th scope="row">Tamanho</th><td>6,7″ na diagonal do retângulo completo e 6,6″ considerando os cantos arredondados</td></tr>
+                            <tr><th scope="row">Resolução</th><td>Full HD+ (1080 × 2340 pixels)</td></tr>
+                            <tr><th scope="row">Taxa de atualização</th><td>Até 120 Hz</td></tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr><th colspan="2" scope="rowgroup">Câmeras e vídeo</th></tr>
+                            <tr><th scope="row">Principal</th><td>50 MP, f/1.8, com estabilização óptica (OIS)</td></tr>
+                            <tr><th scope="row">Ultra-angular</th><td>12 MP, f/2.2</td></tr>
+                            <tr><th scope="row">Macro</th><td>5 MP, f/2.4</td></tr>
+                            <tr><th scope="row">Frontal</th><td>12 MP, f/2.2</td></tr>
+                            <tr><th scope="row">Gravação de vídeo</th><td>Até 4K UHD a 30 quadros por segundo</td></tr>
+                            <tr><th scope="row">Zoom</th><td>Digital de até 10×</td></tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr><th colspan="2" scope="rowgroup">Bateria e construção</th></tr>
+                            <tr><th scope="row">Bateria</th><td>5.000 mAh de capacidade típica</td></tr>
+                            <tr><th scope="row">Carregamento</th><td>Até 45 W por cabo com carregador compatível</td></tr>
+                            <tr><th scope="row">Proteção</th><td>IP68 para resistência à água e à poeira</td></tr>
+                            <tr><th scope="row">Dimensões</th><td>161,5 × 76,8 × 6,9 mm</td></tr>
+                            <tr><th scope="row">Peso</th><td>179 g</td></tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr><th colspan="2" scope="rowgroup">Conectividade e áudio</th></tr>
+                            <tr><th scope="row">Rede móvel</th><td>5G, com Dual SIM e suporte a nano-SIM e eSIM</td></tr>
+                            <tr><th scope="row">Conexões sem fio</th><td>Wi-Fi 6E, Bluetooth 6.0 e NFC</td></tr>
+                            <tr><th scope="row">Porta</th><td>USB-C (USB 2.0)</td></tr>
+                            <tr><th scope="row">Áudio</th><td>Alto-falantes estéreo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <p class="a57-sources">
+                Especificações publicadas pela
+                <a href="https://www.samsung.com/br/smartphones/galaxy-a/galaxy-a57-5g-awesome-gray-128gb-sm-a576bzaezto/">Samsung Brasil</a>,
+                pela <a href="https://news.samsung.com/br/samsung-apresenta-galaxy-a57-5g-e-galaxy-a37-5g-no-brasil-com-recursos-de-nivel-profissional">Samsung Newsroom Brasil</a>
+                e pela <a href="https://www.samsung.com/eg/smartphones/galaxy-a/galaxy-a57-5g-awesome-icyblue-256gb-sm-a576blbvmea/">Samsung (processador, GPU e carregamento)</a>.
+            </p>
+
+            <a href="index.html#vitrine" class="btn btn-neon a57-action">
+                Voltar à vitrine
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="brand">SMARTGIRO<span>.</span></div>
+    </footer>
+</body>
+</html>

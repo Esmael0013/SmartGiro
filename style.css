@@ -249,3 +249,55 @@ footer { background: #010005; padding: 50px 24px; text-align: center; border-top
         transform: translateX(-15px); /* Deslize suave para a esquerda */
     }
 }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy A57 | SmartGiro</title>
+    <link rel="icon" type="image/png" href="unnamed-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@700;900&display=swap">
+</head>
+<body>
+    <header>
+        <div class="brand">Smart<span>Giro</span></div>
+        <a href="index.html#vitrine" style="color: white; text-decoration: none;">
+            Voltar à vitrine
+        </a>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="titulo-produto">
+            <p class="pill-badge">Em breve</p>
+            <h1 id="titulo-produto" class="hero-title">Samsung Galaxy A57</h1>
+
+            <div class="product-showcase">
+                <!-- Substitua o parágrafo pela foto real da unidade. -->
+                <p>Foto a adicionar</p>
+            </div>
+
+            <p class="product-price">Preço a confirmar</p>
+        </section>
+
+        <section class="container" style="max-width: 680px; margin: 0 auto; padding-bottom: 60px;">
+            <div class="tech-card">
+                <h2>Detalhes do aparelho</h2>
+                <p><strong>Armazenamento e RAM</strong> — a confirmar</p>
+                <p><strong>Cor</strong> — a confirmar</p>
+                <p><strong>Estado do aparelho</strong> — a confirmar</p>
+            </div>
+
+            <div class="tech-card">
+                <h2>Como comprar</h2>
+                <!-- Quando publicar o anúncio, adicione aqui o link oficial usando class="btn btn-neon". -->
+                <p>O link do anúncio será adicionado quando a venda abrir.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="brand">Smart<span>Giro</span> By EsmaelTech!</div>
+    </footer>
+</body>
+</html>
